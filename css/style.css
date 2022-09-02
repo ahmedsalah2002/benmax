@@ -744,7 +744,7 @@
   }
   .subject,textarea{
     width: 90%;
-    margin-bottom: 15px;
+    margin: 20px 0;
   }
   .send{
     width: fit-content;
