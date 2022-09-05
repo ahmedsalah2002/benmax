@@ -15,6 +15,29 @@ window.addEventListener('scroll' ,function () {
     }
 })
 
+
+let sections=document.querySelectorAll("section");
+let navsLink=document.querySelectorAll("nav .navbar-nav a")
+
+
+window.addEventListener('scroll' ,function () {
+        sections.forEach((e)=>{
+            let top=window.scrollY;
+            let offset=e.offsetTop;
+            let height=e.offsetHeight;
+            let id =e.getAttribute("id")
+            if(top>=offset-200 && top< offset+height){
+                navsLink.forEach((links)=>{
+                    links.classList.remove("active")
+                    document.querySelector("nav .navbar-nav a[href*="+id+"]").classList.add("active")
+                    
+                })
+            }
+        })
+})
+
+
+
 // start about
 
 
@@ -41,7 +64,7 @@ videos.addEventListener("click",(e)=>{
     let videoBackground = document.createElement("div");
     videoBackground.className = "videoBackground";
     let video = document.createElement("video");
-    video.src = "../about.mp4";
+    video.src = "./about.mp4";
     video.controls = true
     video.autoplay=true;
     videoBackground.appendChild(video);
@@ -64,13 +87,7 @@ videos.addEventListener("click",(e)=>{
     // start protofolio
 
 let protofolioImage=document.querySelectorAll(".protofolio-image");
-let protofolioOverlay=document.querySelectorAll(".protofolio-image .protofolio-image-overlay");
-
 protofolioImage.forEach((e,i)=>{
-    e.addEventListener("mouseover",function(){
-        protofolioOverlay[i].classList.add("visible")
-        
-        })
     e.addEventListener("mouseleave",function(){
         protofolioOverlay[i].classList.remove("visible")
     })
@@ -169,12 +186,19 @@ function startCount(el) {
     if (el.textContent == goal) {
         clearInterval(count);
     }
-    }, 2000 / goal);
+    }, Math.floor(5000 / goal));
 }
 
     // finish protofolio
 
 
 
-
-    
+    // swapping
+        let swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+            // swapping

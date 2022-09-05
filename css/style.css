@@ -39,7 +39,10 @@
   transform: translate(-50%,-50%);
   z-index: 1000;
   color: white;
+  width: 100%;
+  
 }
+
 .landing-text .desc{
   font-size: 2.2em;
   font-weight: 300;
@@ -90,33 +93,37 @@
 
 
 @media (max-width:767px) {
+
   .landing-text .desc {
     font-size: 20px;
+    
   }
   .landing-text h1{
     font-size: 30px;
   }
   .addition{
-    font-size: 10px;
+    font-size: 16px;
+    
   }
   .buttons{
     flex-direction: column;
     
   }
   .btn1{
-    margin-bottom: 25px;
-    width: 100%;
+    margin: 0 auto 25px;
+    width: fit-content;
   }
   .btn2{
-    width: 100%;
+    width: fit-content;
+    margin: auto;
   }
 }
-@media (max-width:991px){
+@media (max-width:991px) and (min-width:768px){
   .landing-text h1{
     font-size: 40px;
   }
   .addition{
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 /* finish landing */
@@ -135,7 +142,7 @@
     color: white !important;
     font-weight: 400 !important;
   }
-  .nav-link:hover{
+  .nav-link:hover,.nav-link.active{
     color: var(--main-color) !important;
   }
 
@@ -241,7 +248,7 @@
   /* start about-two */
   .about-two{
     background-color: #f7f7f7;
-    padding: 150px 0;
+    padding: 50px 0;
   }
 .content{
   text-align: center;
@@ -294,6 +301,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    width: 100%;
     
   }
   .speach{
@@ -345,17 +353,21 @@
   position: relative;
 }
 .protofolio-image-overlay{
-  visibility: hidden;
-  position: absolute;
-  opacity: .9;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 95%;
-  height: 95%;
-  background-color: white;
-  transition: .1s;
   
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  transform: translateY(10px);
+  background-color: white;
+  transition: .2s;
+  
+}
+.protofolio-image:hover .protofolio-image-overlay{
+  opacity: .9;
+  transform: translateY(0);
 }
 .visible{
   visibility: visible;
@@ -543,7 +555,9 @@
     border-left: 1px solid #CCC;
     margin-bottom: 0;
     }
-  
+  .main-team{
+    overflow: hidden;
+  }
     .team h2{
     color: black;
     margin-top: 0;
@@ -569,6 +583,9 @@
     text-decoration: none;
     color: black;
     margin-right: 15px;
+  }
+  .team-cont:hover{
+    cursor: grab;
   }
   .our-team-text a:hover{
     color: black;
