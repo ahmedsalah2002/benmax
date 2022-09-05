@@ -227,7 +227,7 @@
     z-index: 2000;
 }
 .videoBackground {
-  width: 70%;
+  width: 45%;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -239,8 +239,18 @@
   
 }
 .videoBackground video {
-  min-width: 100%;
+  max-width: 100%;
   
+}
+@media (max-width:991px) {
+  .videoBackground{
+    width: 90%;
+  }
+  .videoBackground video {
+    min-width: 100%;
+    
+  }
+
 }
   /* finish about */
 
