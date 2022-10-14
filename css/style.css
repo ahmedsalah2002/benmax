@@ -264,7 +264,7 @@
   text-align: center;
   padding: 25px 10px 5px ;
   background: white;
-  box-shadow: 5px 10px 18px #888888;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 6px;
 }
 .content svg{
@@ -454,7 +454,7 @@
   }
 .service-cont{
   padding: 40px 25px;
-  box-shadow: 5px 10px 18px #888888;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 6px;
 }
 .service-cont svg{
@@ -615,7 +615,7 @@
   .pricing-cont{
     background-color: white;
     border-radius: 6px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 30px 25px;
   }
   .pricing-cont h4{
@@ -675,7 +675,7 @@
     text-align: center;
     background-color: white;
     border-radius: 0 0 6px 6px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding-bottom: 30px;
   }
   .blog-cont h5{
